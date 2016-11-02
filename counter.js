@@ -36,6 +36,13 @@ const mainView = (state, prev, send) => html `
 `
 
 const todoView = (state, prev, send) => {
+  function onSubmit (e) {
+    e.preventDefault()
+    const input = e.target.children[0]
+    send('addTodo', {title: input.value})
+    input.value = ''
+  }
+
   return html `
     <div>
       <h1>Todos</h1>
@@ -47,13 +54,6 @@ const todoView = (state, prev, send) => {
       </ul>
     </div>
   `
-
-  function onSubmit (e) {
-    e.preventDefault()
-    const input = e.target.children[0]
-    send('addTodo', {title: input.value})
-    input.value = ''
-  }
 }
 
 
