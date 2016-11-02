@@ -1,0 +1,22 @@
+{
+  "name": "choo_choo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/madkraft/choo_choo.git",
+    "type": "git"
+  },
+  "scripts": {
+    "start": "budo counter.js --live --open -- -t babelify",
+    "test": "echo 'lol'"
+  },
+  "sourceType": "module",
+  "author": "antonkostiuchkov <antonkostiuchkov@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "budo": "^9.2.1",
+    "choo": "^3.3.0"
+  }
+}
